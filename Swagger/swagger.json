@@ -207,7 +207,7 @@ paths:
                     type: string
                     example: Route invalid
                 type: object
-  /carts/deleteCatalog/:
+  /catalogs/deleteCatalog/:
     delete:
       operationId: 'controllers\CatalogController::deleteCatalog'
       parameters:
@@ -236,7 +236,7 @@ paths:
                     type: string
                     example: Route invalid
                 type: object
-  /favorites/delete/:
+  /catalogs/delete/:
     delete:
       operationId: 'controllers\CatalogController::delete'
       parameters:
@@ -265,7 +265,7 @@ paths:
                     type: string
                     example: Route invalid
                 type: object
-  /carts/update/:
+  /catalogs/update/:
     put:
       operationId: 'controllers\RestCartController::update'
       parameters:
