@@ -267,7 +267,7 @@ paths:
                 type: object
   /catalogs/update/:
     put:
-      operationId: 'controllers\RestCartController::update'
+      operationId: 'controllers\CatalogController::update'
       parameters:
         - name: catalog
           in: query
