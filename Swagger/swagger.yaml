@@ -1,0 +1,124 @@
+---
+swagger: "2.0"
+info:
+  version: 0.0.1-oas3
+  title: API Catalog Service
+paths:
+  /catalogs/getAllCat:
+    get:
+      operationId: controllers\CatalogController::getAllCat
+      parameters: []
+      responses:
+        "200":
+          description: all catalogs
+        "404":
+          description: End-point doesn't exists
+  /catalogs/getById/:
+    get:
+      operationId: controllers\CatalogController::getById
+      parameters:
+      - name: id
+        in: path
+        required: true
+      responses:
+        "200":
+          description: get Catalog by id
+        "404":
+          description: End-point doesn't exists
+  /catalogs/get/:
+    get:
+      operationId: controllers\CatalogController::get
+      parameters: []
+      responses:
+        "200":
+          description: get Catalogs
+        "404":
+          description: End-point doesn't exists
+  /catalogs/getOne/:
+    get:
+      operationId: controllers\CatalogController::getOne
+      parameters:
+      - name: id
+        in: path
+        required: true
+      responses:
+        "200":
+          description: get one Catalogs by id
+        "404":
+          description: End-point doesn't exists
+  /catalogs/addCatalog:
+    post:
+      operationId: controllers\CatalogController::addCatalog
+      parameters:
+      - name: catalog
+        in: query
+        required: true
+      responses:
+        "200":
+          description: 200Ok
+        "404":
+          description: Ressource doesn't exists
+  /catalogs/add:
+    post:
+      operationId: controllers\CatalogController::save
+      parameters:
+      - name: catalog
+        in: query
+        required: true
+      responses:
+        "200":
+          description: 200Ok
+        "404":
+          description: Ressource doesn't exists
+  /catalogs/ajouterProdToCatalog:
+    post:
+      operationId: controllers\CatalogController::ajouterProdToCatalog
+      parameters:
+      - name: idcatalog
+        in: path
+        required: true
+      - name: idproduct
+        in: path
+        required: true
+      responses:
+        "200":
+          description: 200OK
+        "404":
+          description: Ressource doesn't exists
+  /catalogs/deleteCatalog/:
+    delete:
+      operationId: controllers\CatalogController::deleteCatalog
+      parameters:
+      - name: id
+        in: path
+        required: true
+      responses:
+        "200":
+          description: 200OK
+        "404":
+          description: Ressource doesn't exists
+  /catalogs/delete/:
+    delete:
+      operationId: controllers\CatalogController::delete
+      parameters:
+      - name: id
+        in: path
+        required: true
+      responses:
+        "200":
+          description: 200OK
+        "404":
+          description: Ressource doesn't exists
+  /catalogs/update/:
+    put:
+      operationId: controllers\CatalogController::update
+      parameters:
+      - name: catalog
+        in: query
+        required: true
+      responses:
+        "200":
+          description: 200OK
+        "404":
+          description: Ressource doesn't exists
+definitions: {}
